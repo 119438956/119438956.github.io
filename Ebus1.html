@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>eBusiness</title>
+		<style>
+			#header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 15%;
+				background: #FC4445 ;
+				font-size: 3vw;
+				font-color: red;
+			    background-image: url('office2.jpg');
+				background-repeat: no-repeat;
+				background-attachment: fixed;  
+				background-size: cover;
+				
+				
+			}
+			
+			#sidebar {
+				position: fixed;
+				top: 15%;
+				left: 0;
+				width: 15%;
+				height: 85%;
+				background: #FC4445;
+				font-size: 1.5vw;
+				font-family:Arial;
+			}
+			
+			#content {
+				position: fixed;
+				top: 20%;
+				left: 20%;
+				width: 85%;
+				height: 80%;
+				background: white;
+				font-size: 1.5vw;
+				font-family:Arial;
+				overflow: auto;
+			}
+		
+			a{
+			color: #CAFAFE;
+			line-height: 1.6;
+			text-decoration: none;
+			}
+			
+			
+			a{
+			text-decoration: none;
+			color: #CAFAFE;
+			
+			}
+			
+
+			#sidebar a.active {
+			background-color: #97CAEF
+			}
+		
+			
+				.dropdown {
+		  position: relative;
+		  display: inline-block;
+		}
+
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #FC4445;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  padding: 12px 16px;
+		  z-index: 1;
+		}
+
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+		
+		</style>
+			
+	
+
+	</head>
+	<body>
+		<div id="header">
+			<p><font style="font-family:verdana" color="#CAFAFE"><center>Dylan Roche - Consulting Services</center></font style="font-family:verdana" color="#CAFAFE"></p>
+		</div>
+		</div>
+		
+		<div id="sidebar">
+			
+			<a href="html.html">Home</a>
+			<br />
+			<a href="CV.html">Curriculum Vitae</a>
+			<br />
+			<div class="dropdown">
+			  <a href="Travel.html">Interests</a>
+			  <div class="dropdown-content">
+				<a href="Travel.html">Travel</a>
+				<a href="Sport.html">Sport</a>
+			  </div>
+			</div>
+			<br />
+			<div class="dropdown">
+			  <a href="ConsultingServices.html">About Consulting</a>
+			  <div class="dropdown-content">
+				<a href="ConsultingServices.html">Company Details</a>
+				<a href="Research.html">Research</a>
+			<br />
+			</div>
+			</div>
+			<a class ="active" href="Ebus1.html">Services</a>
+		
+		
+ <div id="content">
+
+                           <center><h3>Select a Consulting Service</h3>
+
+                           <input type="radio" id="a" name="service" value="200" onclick="calcSub(this.value)">
+
+                           <label for="Hyperautomation">Hyperautomation - €200</label><br>
+
+                           <input type="radio" id="b" name="service" value="500" onclick="calcSub(this.value)">
+
+                           <label for="Multiexperience">Multiexperience - €500</label><br>
+
+                           <input type="radio" id="c" name="service" value="1000" onclick="calcSub(this.value)">
+
+                           <label for="Distributed Cloud">Distributed Cloud - €1000</label></p>
+
+ 
+
+                           <p id="SubTotal"></p>
+
+                           <p id="Discount"></p>
+
+                           <p id="VAT"></p>
+
+                           <p id="Total"></p>
+
+                          
+
+                           <button class="button btnDisplay" onclick="calcDisp()">Calculate Cost</button>
+
+                           <button class="button btnClear" onclick="uncheck()">Clear Choice</button>
+
+                           </center>
+
+              </div>
+
+ 
+
+</div>
+
+ 
+
+<script>
+
+ 
+
+	var argSelection = 0;
+
+		 var argDiscount, argVat, argPrice;
+
+		
+
+		 function calcSub() {
+
+					   if (a.checked == true){
+
+					   argSelection = a.value;
+
+					   }
+
+					   else if (b.checked == true){
+
+					   argSelection = b.value;
+
+					   }
+
+					   else if (c.checked == true){
+
+					   argSelection = c.value;
+
+					   }
+
+					   calcVatTotal(argSelection);
+
+		 }
+
+		
+
+		 function calcVatTotal(parmSelection){
+
+					   argdiscountAmt = 0.05 * parmSelection;
+					   
+					   argsubTotal = parmSelection - argdiscountAmt;
+
+					   argvatAmt = 0.2 * argsubTotal;
+
+					   argtotalPrice = parmSelection -argdiscountAmt +argvatAmt;
+
+					   display();
+
+		 }
+
+		 function calcDisp() {
+
+					   document.getElementById("SubTotal").innerHTML = "Subtotal:" + "        " + "€" + argSelection;
+
+					   document.getElementById("Discount").innerHTML = "Discount @ 5%:" + "                " + "-€" + argdiscountAmt.toFixed(2);
+
+					   document.getElementById("VAT").innerHTML = "Vat @ 20%:" + "                     " + "-€" + argvatAmt.toFixed(2);
+
+					   document.getElementById("Total").innerHTML = "Total:"  + "                  " + "€"+ argtotalPrice.toFixed(2);
+
+					 
+
+					document.getElementById("SubTotal").style.display = "block";
+								
+					document.getElementById("Discount").style.display = "block";
+					
+					document.getElementById("VAT").style.display = "block";
+					
+					document.getElementById("Total").style.display = "block";
+		 }
+
+		
+
+
+
+		function uncheck() {
+
+		document.getElementById("a").checked = false;
+
+		document.getElementById("b").checked = false;
+
+		document.getElementById("c").checked = false;
+
+	<!--document.getElementById("SubTotal").value = "."; -->
+		
+		document.getElementById("SubTotal").style.display = "none";
+		
+		document.getElementById("Discount").style.display = "none";
+		
+		document.getElementById("VAT").style.display = "none";
+		
+		document.getElementById("Total").style.display = "none";
+		}
+
+ 
+
+</script>
+		</div>
+			
+	</body>
+	
+</html>

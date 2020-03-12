@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 	<head>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Dylan Roche CV</title>
-		<style>
-			#header {
+	<title>About Consulting</title>
+	<style>
+				#header {
 				position: fixed;
 				top: 0;
 				left: 0;
@@ -19,7 +20,7 @@
 				background-repeat: no-repeat;
 				background-attachment: fixed;  
 				background-size: cover;
-				
+				text-align: center;
 				
 			}
 			
@@ -43,7 +44,7 @@
 				background: white;
 				font-size: 28px;
 				font-family:Arial;
-				overflow: auto;
+				overflow:auto;
 			}
 		
 			a{
@@ -52,18 +53,20 @@
 			text-decoration: none;
 			}
 			
-			
-			a{
+			a:hover{
 			text-decoration: none;
-			color: #CAFAFE;
-			
 			}
 			
+	
 
 			#sidebar a.active {
 			background-color: #97CAEF
 			}
 		
+			
+			div.container {
+			position: fixed;
+			}
 			
 				.dropdown {
 		  position: relative;
@@ -83,21 +86,24 @@
 		.dropdown:hover .dropdown-content {
 		  display: block;
 		}
-			
+			.center {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  
+			}
 		</style>
-			
-	
-
 	</head>
+
 	<body>
 		<div id="header">
-			<p><font color="#CAFAFE"><center>Dylan Roche - Consulting Services</center></font color="#CAFAFE"></p>
+			<p><font style="font-family:verdana" color="#CAFAFE"><center>Dylan Roche - Consulting Services</center></font style="font-family:verdana" color="#CAFAFE"></p>
 		</div>
-		
+		</div>
 		
 		<div id="sidebar">
 			
-			<a class="active" href="html.html">Home</a>
+			<a href="html.html">Home</a>
 			<br />
 			<a href="CV.html">Curriculum Vitae</a>
 			<br />
@@ -110,25 +116,27 @@
 			</div>
 			<br />
 			<div class="dropdown">
-			  <a href="ConsultingServices.html">About Consulting</a>
+			  <a class="active" href="ConsultingServices.html">About Consulting</a>
 			  <div class="dropdown-content">
-				<a href="ConsultingServices.html">Company Details</a>
+				<a class="active" href="ConsultingServices.html">Company Details</a>
 				<a href="Research.html">Research</a>
+			
 			<br />
-			</div>
-			</div>
-			<a href="Ebus1.html">Services</a>
-			</div>
-		
-		
+		</div>
+		</div>
+		<a href="Ebus1.html">Services</a>
+		</div>
 		<div id="content">
-			<p><h3><center> Welcome to my website</h3></p>
+			<p><h3 style="text-align:center;"><b><u>Company Details</u></b></h3></p>
+			<img src="https://i.pinimg.com/originals/0e/40/00/0e40001e6854aba7db424a74460f2029.png" alt="Blank Profile Picture" class="center" width="200" height="207">
 			</br>
-			<p><h4><center> About Me</p></h4>
-			<p><h5><center> I am a first year student studying BIS in UCC. This website is a part of my IS1113 project </p></h5>
-			<p><h5><center> This project is to help me learn and develop my HTML, CSS and JavaScript </p></h5>
+			<p><h5 style="text-align:center;">Roche Consultancy</font color="black"></h5></p>
+			<p><h5 style="text-align:center;">Address: **********</font color="black"></h5></p>
+			<p><h5 style="text-align:center;">Phone number: 08********</font color="black"></h5></p>
+			<p><h5 style="text-align:center;">Email:*********@gmail.com</font color="black"></h5></p>
+			
 		</div>
 			
 	</body>
-	
+
 </html>

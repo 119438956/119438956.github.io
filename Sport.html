@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Interests - Sport</title>
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+				#container {
+				  overflow: hidden;
+				  width: 800px;
+				  height: 230px;
+				  margin: 0 auto;
+				  cursor: pointer;
+				  margin-top:150px;
+				}
+
+				#imgs {
+				  display: block;
+				  padding: 0;
+				  width: 200%;
+				}
+
+				#imgs li {
+				  padding-right: 10px;
+				  display: inline-block;
+				 *display:inline;
+				}
+
+				#imgs img {
+				  width: 160px;
+				  height: 120px;
+				}
+
+				.title {
+				  display: block;
+				  width: 100%;
+				  height: 38px;
+				  line-height: 38px;
+				  color: white;
+				  font-weight: bold;
+				  text-align: center;
+				  background: #FC4445;
+				}
+				#header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 15%;
+				background: #FC4445 ;
+				font-size: 3vw;
+				font-color: red;
+			    background-image: url('office2.jpg');
+				background-repeat: no-repeat;
+				background-attachment: fixed;  
+				background-size: cover;
+				text-align: center;
+				
+			}
+			
+			#sidebar {
+				position: fixed;
+				top: 15%;
+				left: 0;
+				width: 15%;
+				height: 85%;
+				background: #FC4445;
+				font-size: 1.5vw;
+				font-family:Arial;
+			}
+			
+			#content {
+				position: fixed;
+				top: 20%;
+				left: 20%;
+				width: 85%;
+				height: 80%;
+				background: white;
+				font-size: 1.5vw;
+				font-family:Arial;
+				overflow:auto;
+			}
+		
+			a{
+			color: #CAFAFE;
+			line-height: 1.6;
+			text-decoration: none;
+			}
+			
+			a:hover{
+			text-decoration: none;
+			}
+			
+	
+
+			#sidebar a.active {
+			background-color: #97CAEF
+			}
+		
+			
+			div.container {
+			padding-right: 30px;
+			float: right;
+			}
+			
+			
+			.dropdown {
+		  position: relative;
+		  display: inline-block;
+		}
+
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #FC4445;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  padding: 12px 16px;
+		  z-index: 1;
+		}
+
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+		</style>
+	</head>
+
+	<body>
+	
+		<div id="header">
+			<p><font style="font-family:verdana" color="#CAFAFE"><center>Dylan Roche - Consulting Services</center></font style="font-family:verdana" color="#CAFAFE"></p>
+		</div>
+		
+		
+		<div id="sidebar">
+			
+			<a href="html.html">Home</a>
+			<br />
+			<a href="CV.html">Curriculum Vitae</a>
+			<br />
+			<div class="dropdown">
+			  <a class="active" href="Travel.html">Interests</a>
+			  <div class="dropdown-content">
+				<a href="Travel.html">Travel</a><br>
+				<a class="active" href="Sport.html">Sport</a>
+			  </div>
+			</div>
+			<br />
+<div class="dropdown">
+			  <a href="ConsultingServices.html">About Consulting</a>
+			  <div class="dropdown-content">
+				<a href="ConsultingServices.html">Company Details</a>
+				<a href="Research.html">Research</a>
+			<br />
+			</div>
+		</div>
+			<a href="Ebus1.html">Services</a>
+			</div>
+		
+
+		<div id="container"> <span class="title">Sport</span>
+	<ul id="imgs">
+    <li><img src="https://network.punditarena.com/uploads/2015/01/tennis_Racket_and_Balls.jpg" alt="" /></li>
+    <li><img src="https://d32dsh9a6dg9hg.cloudfront.net/wp-content/uploads/sites/4/2018/08/02103011/Badminton.jpg" alt="" /></li>
+    <li><img src="https://images.wallpaperscraft.com/image/volleyball_balls_volleyball_sports_113210_800x600.jpg" alt="" /></li>
+    <li><img src="https://img.rasset.ie/0001a3bb-800.jpg" alt="" /></li>
+	<li><img src="https://fp-news.com/wp-content/uploads/2019/10/mma-news-ufc-legend-targets-jon-jones-for-octagon-comeback-niko-price-wants-bmf-belt-shot-mackenzie-dern-speaks-after-first-loss-800x600.jpg" alt="" /></li>
+	<li><img src="https://e0.365dm.com/19/09/800x600/skysports-rams-nfl-kupp_4776348.jpg" alt="" /></li>
+  
+  </ul>
+  <span class="title"></span> </div>
+<div id="controler"> </div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script type="text/javascript" src="ImageScroll.js"></script> 
+<script type="text/javascript">
+
+  $('#imgs').imageScroll({
+    orientation:"left",
+    speed:600,
+    interval:1000,
+    hoverPause:true,
+    callback:function(){
+      var ordinal = $(this).find("img").first().attr("src");
+      <!-- console.log(ordinal); -->
+    }
+  });
+
+  </script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	
+	<p><h4><center>
+		  Despite not playing sport, I find watching sport to be entertaining. I enjoy watching tennis, handball, hockey, American Football, UFC and<br> Badminton
+		My favourite sports are UFC and tennis. My favourite UFC fighter is Conor McGregor. My favourite tennis player is Naomi Osaka
+		</center></h4> </p>
+			
+	</body>
+
+</html>
