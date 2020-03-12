@@ -121,7 +121,7 @@
 		
 		
  <div id="content">
-
+<!-- This code displays radio buttons for the services -->
                            <center><h3>Select a Consulting Service</h3>
 
                            <input type="radio" id="a" name="service" value="200" onclick="calcSub(this.value)">
@@ -165,7 +165,7 @@
 <script>
 
  
-
+// This code defaults Selection to 0
 	var argSelection = 0;
 
 		 var argDiscount, argVat, argPrice;
@@ -197,7 +197,7 @@
 		 }
 
 		
-
+		//This code does the calculations
 		 function calcVatTotal(parmSelection){
 
 					   argdiscountAmt = 0.05 * parmSelection;
@@ -208,10 +208,10 @@
 
 					   argtotalPrice = parmSelection -argdiscountAmt +argvatAmt;
 
-					   display();
+			
 
 		 }
-
+		//This code displays the calculations
 		 function calcDisp() {
 
 					   document.getElementById("SubTotal").innerHTML = "Subtotal:" + "        " + "€" + argSelection;
@@ -236,7 +236,7 @@
 		
 
 
-
+		//This is the code for the clear button
 		function uncheck() {
 
 		document.getElementById("a").checked = false;
@@ -245,7 +245,6 @@
 
 		document.getElementById("c").checked = false;
 
-	<!--document.getElementById("SubTotal").value = "."; -->
 		
 		document.getElementById("SubTotal").style.display = "none";
 		
@@ -259,7 +258,6 @@
  
 
 </script>
-		</div>
 			
 	</body>
 	
